@@ -1,0 +1,30 @@
+﻿@model Hospital.Models.Admin
+@*Admin Button*@
+<html>
+    <head>
+<style>
+   .jumbotron{
+          margin-top: 0px;
+      margin-bottom: 0px;
+       text-align: center;
+   }
+
+</style>
+</head>
+<body>
+<br>
+<br>
+ @Html.Partial("navbar")
+<div class="jumbotron" style="margin-bottom:0px;">
+  <h1 class="display-4" style="text-align:center;">Hello, Admin</h1>
+  <p class="lead">Welcome to Hospital Management System.</p>
+  <hr class="my-4">
+  <p>You can access various features after Login/SignUp.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="~/Home/AdminSignUp" role="button">SignUp</a>
+    <a class="btn btn-primary btn-lg" href="/Home/AdminLoginPage" role="button">Login</a>
+  </p>
+</div>
+@Html.Partial("footer")
+</body>
+</html>

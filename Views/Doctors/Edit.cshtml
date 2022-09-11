@@ -1,0 +1,56 @@
+﻿@model Hospital.Models.Doctor
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<html>
+   
+    <body style="background-image: linear-gradient( to right, #baf3d7, #c2f5de, #cbf7e4, #d4f8ea, #ddfaef );">
+<h1 style="text-align:center;">Edit</h1>
+
+<h4 style="text-align:center;">Doctor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4" style="flex: 0 0 auto;
+    width: 33.33333333%;
+    margin-left: 35%;
+    border: 2px solid black;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: white;">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Doc_Username" class="control-label"></label>
+                <input asp-for="Doc_Username" class="form-control" />
+                <span asp-validation-for="Doc_Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Doc_Password" class="control-label"></label>
+                <input asp-for="Doc_Password" class="form-control" />
+                <span asp-validation-for="Doc_Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Departmant" class="control-label"></label>
+                <input asp-for="Departmant" class="form-control" />
+                <span asp-validation-for="Departmant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mobile" class="control-label"></label>
+                <input asp-for="Mobile" class="form-control" />
+                <span asp-validation-for="Mobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" style=" margin-left: 40%;
+    margin-top: 20px;"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

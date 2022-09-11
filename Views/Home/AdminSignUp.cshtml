@@ -1,0 +1,188 @@
+﻿@model Hospital.Models.Admin
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>LazyCoder || sumit</title>
+  <style type="text/css">
+        
+
+    input {
+        width: 400px;
+        height: 35px;
+    }
+     .round{
+      
+      border-radius: 2rem;
+    }
+
+
+    .form-select {
+        width: 100px;
+        height: 35px;
+    }
+    .a{
+      
+        color:white;
+    }
+    body {
+      color: #aa082e;
+      background-color: #b6bde7;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    .note {
+      text-align: center;
+      height: 80px;
+      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+      color: #fff;
+      font-weight: bold;
+      line-height: 80px;
+    }
+
+    .form-content {
+      padding: 5%;
+      border: 1px solid #ced4da;
+      margin-bottom: 2%;
+    }
+
+    .form-control {
+      border-radius: 1.5rem;
+    }
+
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: #0062cc;
+      color: #fff;
+       margin-right: 40px;
+    }
+    .form-content{
+           background-image: linear-gradient(to right, #0dcaf0 , #337AB7);
+    }
+  </style>
+  <script>
+
+      function myFunction() {
+  var x = document.getElementById("in4");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+  </script>
+</head>
+
+
+<body>
+ @Html.Partial("navbar")
+  <br>
+  <br>
+  <br>
+  <br>
+
+    <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form method="post">
+        
+            <div asp-validation-summary="All" class="text-danger"></div>
+          <div class="divider d-flex align-items-center my-4">
+            <h2 class="text-center fw-bold mx-3 mb-0">Admin SignUp</h2>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input asp-for="Username"  id="form3Example3" class="form-control form-control-lg"
+              placeholder="Enter Username" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            <label asp-for="Username" class="form-label" for="form3Example3"></label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+           <input asp-for="Password"  id="form3Example3" class="form-control form-control-lg"
+              placeholder="Enter password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+              <label asp-for="Password" class="form-label" for="form3Example3"></label>
+          </div>
+
+     
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">SignUp</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Already have account? <a href="~/Home/AdminLoginPage"
+                class="link-danger">Login</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!--- signup page for admin ---------->
+@*<form class="form-inline text-center f1" method="post" action="/Home/AdminSignUp">
+   
+    <div class="container register-form">
+      <div class="form">
+        <div class="note">
+          <p>Admin SignUp</p>
+        </div>
+
+        <div class="form-content">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+            <input asp-for="Username" placeholder="Enter Name" id="in1" class="rounded" style="margin-left:45px" required>
+              </div>
+         
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                  <div> 
+                      <input asp-for="Password" type="password" placeholder="Enter Password" style="margin-left:45px" id="in4" class="rounded" required>
+           <i class="bi bi-eye-slash" onclick="myFunction()"></i>
+
+                   
+                  </div>
+  
+              </div>
+        
+
+            </div>
+          </div>
+          <br><br>
+          <button type="submit" class="btnSubmit">Submit</button>
+          <br><br>
+          <div class="text-center">Already have an Account? <a href="~/Home/AdminLoginPage"><u>Click here</u></a> to Login</div>
+        </div>
+      </div>
+    </div>
+
+
+  </form>@**@
+ <br><br>
+@Html.Partial("footer")
+</body>
+
+</html>
